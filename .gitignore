@@ -1,0 +1,25 @@
+# Godot 4 build cache — never commit this
+.godot/
+
+# Export templates output
+export/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor backups
+*.bak
+*.swp
+*~
+
+# PCK/ZIP exports
+*.pck
+*.zip
+*.exe
+*.x86_64
+*.apk
+*.ipa
+
+# Save files (don't commit player progress)
+*.json

@@ -1,0 +1,112 @@
+[gd_scene load_steps=2 format=3 uid="uid://staff_menu_001"]
+
+[ext_resource type="Script" path="res://scripts/StaffMenu.gd" id="1_staff"]
+
+[node name="StaffMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_staff")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.08, 0.1, 0.12, 1)
+
+[node name="Header" type="PanelContainer" parent="."]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1280.0
+offset_bottom = 60.0
+
+[node name="HBox" type="HBoxContainer" parent="Header"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(240, 0)
+theme_override_font_sizes/font_size = 26
+text = "  STAFF"
+
+[node name="MoneyLabel" type="Label" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(240, 0)
+theme_override_font_sizes/font_size = 20
+text = "Cash: $0.00"
+
+[node name="RefreshBtn" type="Button" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 0)
+theme_override_font_sizes/font_size = 16
+text = "REROLL CANDIDATES ($20)"
+
+[node name="Spacer" type="Control" parent="Header/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BackBtn" type="Button" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(110, 0)
+theme_override_font_sizes/font_size = 18
+text = "← BACK"
+
+[node name="Split" type="HSplitContainer" parent="."]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 60.0
+offset_right = 1280.0
+offset_bottom = 680.0
+split_offset = 640
+
+[node name="Left" type="VBoxContainer" parent="Split"]
+layout_mode = 3
+
+[node name="LeftTitle" type="Label" parent="Split/Left"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "  Available Barbers"
+modulate = Color(0.9, 0.9, 0.6, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Split/Left"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CandidateList" type="VBoxContainer" parent="Split/Left/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Right" type="VBoxContainer" parent="Split"]
+layout_mode = 3
+
+[node name="RightTitle" type="Label" parent="Split/Right"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "  Your Team"
+modulate = Color(0.6, 0.9, 0.7, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Split/Right"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HiredList" type="VBoxContainer" parent="Split/Right/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="ChatterLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 685.0
+offset_right = 1260.0
+offset_bottom = 715.0
+theme_override_font_sizes/font_size = 16
+text = ""
+modulate = Color(0.7, 0.85, 1.0, 1)
+horizontal_alignment = 1

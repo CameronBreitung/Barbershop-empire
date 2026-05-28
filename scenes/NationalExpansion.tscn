@@ -1,0 +1,146 @@
+[gd_scene load_steps=2 format=3 uid="uid://national_exp_001"]
+
+[ext_resource type="Script" path="res://scripts/NationalExpansion.gd" id="1_national"]
+
+[node name="NationalExpansion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_national")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.05, 0.1, 1)
+
+[node name="Header" type="PanelContainer" parent="."]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1280.0
+offset_bottom = 70.0
+
+[node name="HBox" type="HBoxContainer" parent="Header"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(320, 0)
+theme_override_font_sizes/font_size = 24
+text = "  NATIONAL EXPANSION"
+
+[node name="MoneyLabel" type="Label" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(230, 0)
+theme_override_font_sizes/font_size = 19
+text = "Cash: $0"
+
+[node name="RepLabel" type="Label" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(160, 0)
+theme_override_font_sizes/font_size = 17
+text = "Rep: 0"
+
+[node name="Spacer" type="Control" parent="Header/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BackBtn" type="Button" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(110, 0)
+theme_override_font_sizes/font_size = 18
+text = "← BACK"
+
+[node name="EmpireBarLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 75.0
+offset_right = 300.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 14
+text = "National Domination:"
+
+[node name="EmpireBar" type="ProgressBar" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(220, 20)
+value = 0.0
+show_percentage = true
+
+[node name="SubtitleLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 74.0
+offset_right = 980.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 15
+text = "Acquire every major chain to complete your empire. Own all 5 to win."
+modulate = Color(0.8, 0.75, 0.5, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 105.0
+offset_right = 740.0
+offset_bottom = 680.0
+
+[node name="ChainList" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="InfoPanel" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 760.0
+offset_top = 105.0
+offset_right = 1260.0
+offset_bottom = 580.0
+visible = false
+
+[node name="VBox" type="VBoxContainer" parent="InfoPanel"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 480.0
+offset_bottom = 460.0
+theme_override_constants/separation = 16
+
+[node name="NameLabel" type="Label" parent="InfoPanel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Chain Name"
+
+[node name="DescLabel" type="Label" parent="InfoPanel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Description"
+autowrap_mode = 3
+modulate = Color(0.8, 0.8, 0.8, 1)
+
+[node name="StatsLabel" type="Label" parent="InfoPanel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = ""
+modulate = Color(0.7, 0.9, 0.7, 1)
+
+[node name="BuyBtn" type="Button" parent="InfoPanel/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 56)
+theme_override_font_sizes/font_size = 22
+text = "ACQUIRE"
+
+[node name="StatusLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 685.0
+offset_right = 1260.0
+offset_bottom = 715.0
+theme_override_font_sizes/font_size = 20
+text = ""
+horizontal_alignment = 1
+modulate = Color(0.3, 1.0, 0.5, 1)
+visible = false

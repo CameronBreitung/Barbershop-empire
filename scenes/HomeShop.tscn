@@ -1,0 +1,291 @@
+[gd_scene load_steps=2 format=3 uid="uid://home_shop_001"]
+
+[ext_resource type="Script" path="res://scripts/HomeShop.gd" id="1_homeshop"]
+
+[node name="HomeShop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_homeshop")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.15, 0.1, 0.06, 1)
+
+[node name="WallStripes" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1280.0
+offset_bottom = 30.0
+color = Color(0.22, 0.14, 0.08, 1)
+
+[node name="Floor" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 600.0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.3, 0.22, 0.14, 1)
+
+[node name="HUD" type="PanelContainer" parent="."]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1280.0
+offset_bottom = 52.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="MoneyLabel" type="Label" parent="HUD/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(180, 0)
+theme_override_font_sizes/font_size = 20
+text = "$0.00"
+
+[node name="RepLabel" type="Label" parent="HUD/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(130, 0)
+theme_override_font_sizes/font_size = 18
+text = "Rep: 0"
+
+[node name="IncomeLabel" type="Label" parent="HUD/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(160, 0)
+theme_override_font_sizes/font_size = 16
+text = ""
+modulate = Color(0.5, 1.0, 0.5, 1)
+
+[node name="Spacer" type="Control" parent="HUD/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BtnUpgrade" type="Button" parent="HUD/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+text = "UPGRADES"
+
+[node name="BtnStaff" type="Button" parent="HUD/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "STAFF"
+
+[node name="BtnShop" type="Button" parent="HUD/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(80, 0)
+text = "SHOPS"
+
+[node name="BtnEmpire" type="Button" parent="HUD/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(90, 0)
+text = "EMPIRE"
+
+[node name="BtnSave" type="Button" parent="HUD/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(70, 0)
+text = "SAVE"
+
+[node name="BtnMenu" type="Button" parent="HUD/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(70, 0)
+text = "MENU"
+
+[node name="ScoreBar" type="ProgressBar" parent="."]
+layout_mode = 1
+offset_left = 60.0
+offset_top = 62.0
+offset_right = 620.0
+offset_bottom = 80.0
+value = 0.0
+show_percentage = false
+
+[node name="ScoreBarLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 60.0
+offset_top = 82.0
+offset_right = 220.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 12
+text = "Cut Progress"
+
+[node name="PatienceBar" type="ProgressBar" parent="."]
+layout_mode = 1
+offset_left = 660.0
+offset_top = 62.0
+offset_right = 1220.0
+offset_bottom = 80.0
+value = 100.0
+show_percentage = false
+modulate = Color(1, 0.4, 0.4, 1)
+
+[node name="PatienceBarLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 660.0
+offset_top = 82.0
+offset_right = 820.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 12
+text = "Customer Patience"
+
+[node name="DialogueLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 300.0
+offset_top = 105.0
+offset_right = 980.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 18
+text = "Waiting for customer..."
+horizontal_alignment = 1
+modulate = Color(1.0, 0.95, 0.7, 1)
+
+[node name="CustomerArea" type="Control" parent="."]
+layout_mode = 1
+offset_left = 390.0
+offset_top = 160.0
+offset_right = 890.0
+offset_bottom = 600.0
+
+[node name="ChairRect" type="ColorRect" parent="CustomerArea"]
+layout_mode = 1
+offset_left = 50.0
+offset_top = 280.0
+offset_right = 450.0
+offset_bottom = 440.0
+color = Color(0.4, 0.25, 0.1, 1)
+
+[node name="CustomerBody" type="ColorRect" parent="CustomerArea"]
+layout_mode = 1
+offset_left = 130.0
+offset_top = 160.0
+offset_right = 370.0
+offset_bottom = 340.0
+color = Color(0.75, 0.6, 0.5, 1)
+
+[node name="CustomerHead" type="ColorRect" parent="CustomerArea"]
+layout_mode = 1
+offset_left = 165.0
+offset_top = 20.0
+offset_right = 335.0
+offset_bottom = 170.0
+color = Color(0.7, 0.5, 0.35, 1)
+
+[node name="HairRect" type="ColorRect" parent="CustomerArea"]
+layout_mode = 1
+offset_left = 155.0
+offset_top = 10.0
+offset_right = 345.0
+offset_bottom = 80.0
+color = Color(0.15, 0.08, 0.04, 1)
+
+[node name="ClipZone" type="Control" parent="CustomerArea"]
+layout_mode = 1
+offset_left = 100.0
+offset_top = 0.0
+offset_right = 400.0
+offset_bottom = 180.0
+
+[node name="ZoneBorder" type="ColorRect" parent="CustomerArea/ClipZone"]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 300.0
+offset_bottom = 180.0
+color = Color(1, 1, 0, 0.12)
+
+[node name="Fill" type="ColorRect" parent="CustomerArea/ClipZone"]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 180.0
+color = Color(0.2, 0.9, 0.3, 0.45)
+
+[node name="ClipHint" type="Label" parent="CustomerArea/ClipZone"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 75.0
+offset_right = 270.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 14
+text = "Click & Drag to Cut Here"
+modulate = Color(1, 1, 1, 0.55)
+horizontal_alignment = 1
+
+[node name="ResultPanel" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 340.0
+offset_top = 190.0
+offset_right = 940.0
+offset_bottom = 490.0
+visible = false
+
+[node name="ResultTitle" type="Label" parent="ResultPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 590.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 26
+text = "Haircut Complete!"
+horizontal_alignment = 1
+
+[node name="StarsLabel" type="Label" parent="ResultPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 55.0
+offset_right = 590.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 32
+text = "★★★★★"
+horizontal_alignment = 1
+
+[node name="ResultLabel" type="Label" parent="ResultPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 100.0
+offset_right = 590.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 20
+text = "$0.00 earned"
+horizontal_alignment = 1
+
+[node name="ReviewLabel" type="Label" parent="ResultPanel"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 145.0
+offset_right = 580.0
+offset_bottom = 225.0
+theme_override_font_sizes/font_size = 15
+text = ""
+horizontal_alignment = 1
+autowrap_mode = 3
+modulate = Color(0.9, 0.9, 0.7, 1)
+
+[node name="NextBtn" type="Button" parent="ResultPanel"]
+layout_mode = 1
+offset_left = 190.0
+offset_top = 240.0
+offset_right = 410.0
+offset_bottom = 280.0
+theme_override_font_sizes/font_size = 20
+text = "NEXT CUSTOMER"
+
+[node name="NotificationLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 200.0
+offset_top = 650.0
+offset_right = 1080.0
+offset_bottom = 695.0
+theme_override_font_sizes/font_size = 20
+text = ""
+horizontal_alignment = 1
+modulate = Color(0.4, 1.0, 0.5, 1)
+visible = false

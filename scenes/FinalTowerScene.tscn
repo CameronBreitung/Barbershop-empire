@@ -1,0 +1,187 @@
+[gd_scene load_steps=2 format=3 uid="uid://final_tower_001"]
+
+[ext_resource type="Script" path="res://scripts/FinalTowerScene.gd" id="1_tower"]
+
+[node name="FinalTowerScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tower")
+
+[node name="Background" type="ColorRect" parent="."]
+name = "Background"
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.08, 0.18, 1)
+
+[node name="CityRect" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 380.0
+offset_right = 1280.0
+offset_bottom = 600.0
+color = Color(0.08, 0.08, 0.15, 1)
+
+[node name="Building1" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 440.0
+offset_right = 120.0
+offset_bottom = 600.0
+color = Color(0.1, 0.1, 0.18, 1)
+
+[node name="Building2" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 130.0
+offset_top = 400.0
+offset_right = 280.0
+offset_bottom = 600.0
+color = Color(0.12, 0.12, 0.2, 1)
+
+[node name="Building3" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 290.0
+offset_top = 460.0
+offset_right = 420.0
+offset_bottom = 600.0
+color = Color(0.09, 0.09, 0.16, 1)
+
+[node name="Building4" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 860.0
+offset_top = 390.0
+offset_right = 1010.0
+offset_bottom = 600.0
+color = Color(0.11, 0.11, 0.19, 1)
+
+[node name="Building5" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 1020.0
+offset_top = 450.0
+offset_right = 1150.0
+offset_bottom = 600.0
+color = Color(0.09, 0.09, 0.15, 1)
+
+[node name="Building6" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 1160.0
+offset_top = 420.0
+offset_right = 1280.0
+offset_bottom = 600.0
+color = Color(0.1, 0.1, 0.17, 1)
+
+[node name="SkyscraperTower" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 490.0
+offset_top = 60.0
+offset_right = 790.0
+offset_bottom = 600.0
+color = Color(0.18, 0.22, 0.35, 1)
+
+[node name="TowerWindows" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 510.0
+offset_top = 80.0
+offset_right = 770.0
+offset_bottom = 350.0
+color = Color(0.25, 0.55, 0.8, 0.3)
+
+[node name="DeskRect" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 390.0
+offset_top = 580.0
+offset_right = 890.0
+offset_bottom = 720.0
+color = Color(0.25, 0.18, 0.10, 1)
+
+[node name="DeskSurface" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 390.0
+offset_top = 580.0
+offset_right = 890.0
+offset_bottom = 610.0
+color = Color(0.55, 0.38, 0.18, 1)
+
+[node name="PlayerSilhouette" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 595.0
+offset_top = 490.0
+offset_right = 685.0
+offset_bottom = 585.0
+color = Color(0.05, 0.03, 0.02, 1)
+
+[node name="Stars1" type="Label" parent="."]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 5.0
+offset_right = 1280.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 14
+text = "·  ·   ·    · ·  ·   ·  ·    ·  ·   ·   ·    ·  ·   ·  · ·    ·  ·  ·   ·   ·  ·"
+modulate = Color(0.9, 0.9, 1.0, 0.6)
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1280.0
+offset_bottom = 480.0
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(900, 0)
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 58
+text = "YOU OWN IT ALL."
+horizontal_alignment = 1
+modulate = Color(1.0, 0.9, 0.3, 1)
+
+[node name="StatsLabel" type="Label" parent="CenterContainer/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "Empire Summary"
+horizontal_alignment = 1
+modulate = Color(0.85, 0.95, 0.85, 1)
+
+[node name="QuoteLabel" type="Label" parent="CenterContainer/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = ""
+horizontal_alignment = 1
+modulate = Color(0.7, 0.85, 1.0, 1)
+autowrap_mode = 3
+
+[node name="CreditsLabel" type="RichTextLabel" parent="CenterContainer/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(900, 160)
+bbcode_enabled = true
+text = ""
+scroll_active = false
+
+[node name="HBox" type="HBoxContainer" parent="CenterContainer/VBox"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 20
+
+[node name="MenuBtn" type="Button" parent="CenterContainer/VBox/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 52)
+theme_override_font_sizes/font_size = 20
+text = "MAIN MENU"
+
+[node name="KeepPlayingBtn" type="Button" parent="CenterContainer/VBox/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(220, 52)
+theme_override_font_sizes/font_size = 20
+text = "KEEP PLAYING"
+modulate = Color(0.5, 1.0, 0.5, 1)

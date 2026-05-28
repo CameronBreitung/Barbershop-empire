@@ -1,0 +1,105 @@
+[gd_scene load_steps=2 format=3 uid="uid://upgrade_menu_001"]
+
+[ext_resource type="Script" path="res://scripts/UpgradeMenu.gd" id="1_upgrade"]
+
+[node name="UpgradeMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_upgrade")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.08, 0.05, 1)
+
+[node name="Header" type="PanelContainer" parent="."]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1280.0
+offset_bottom = 60.0
+
+[node name="HBox" type="HBoxContainer" parent="Header"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(280, 0)
+theme_override_font_sizes/font_size = 26
+text = "  UPGRADES"
+
+[node name="MoneyLabel" type="Label" parent="Header/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Cash: $0.00"
+horizontal_alignment = 2
+
+[node name="BackBtn" type="Button" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(110, 0)
+theme_override_font_sizes/font_size = 18
+text = "← BACK"
+
+[node name="SubtitleLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 40.0
+offset_top = 72.0
+offset_right = 900.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 15
+text = "Invest in your skills. Each level makes you faster, sharper, and more profitable."
+modulate = Color(0.8, 0.75, 0.5, 1)
+
+[node name="ColHeaders" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 40.0
+offset_top = 105.0
+offset_right = 1240.0
+offset_bottom = 130.0
+
+[node name="LblH1" type="Label" parent="ColHeaders"]
+layout_mode = 2
+custom_minimum_size = Vector2(220, 0)
+theme_override_font_sizes/font_size = 14
+text = "UPGRADE"
+modulate = Color(0.7, 0.7, 0.7, 1)
+
+[node name="LblH2" type="Label" parent="ColHeaders"]
+layout_mode = 2
+custom_minimum_size = Vector2(100, 0)
+theme_override_font_sizes/font_size = 14
+text = "LEVEL"
+modulate = Color(0.7, 0.7, 0.7, 1)
+
+[node name="LblH3" type="Label" parent="ColHeaders"]
+layout_mode = 2
+custom_minimum_size = Vector2(160, 0)
+theme_override_font_sizes/font_size = 14
+text = "NEXT COST"
+modulate = Color(0.7, 0.7, 0.7, 1)
+
+[node name="LblH4" type="Label" parent="ColHeaders"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+text = "EFFECT"
+modulate = Color(0.7, 0.7, 0.7, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+offset_left = 40.0
+offset_top = 135.0
+offset_right = 1240.0
+offset_bottom = 680.0
+
+[node name="UpgradeList" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10

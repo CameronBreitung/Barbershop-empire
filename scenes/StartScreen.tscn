@@ -1,0 +1,183 @@
+[gd_scene load_steps=2 format=3 uid="uid://start_screen_001"]
+
+[ext_resource type="Script" path="res://scripts/StartScreen.gd" id="1_start"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_start")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.12, 0.07, 0.04, 1)
+
+[node name="HomeDoor" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 490.0
+offset_top = 180.0
+offset_right = 790.0
+offset_bottom = 680.0
+color = Color(0.35, 0.2, 0.08, 1)
+
+[node name="DoorKnob" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 750.0
+offset_top = 400.0
+offset_right = 770.0
+offset_bottom = 420.0
+color = Color(0.9, 0.7, 0.1, 1)
+
+[node name="DoorWindow" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = 570.0
+offset_top = 220.0
+offset_right = 710.0
+offset_bottom = 340.0
+color = Color(0.5, 0.75, 0.9, 1)
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 200.0
+offset_top = 60.0
+offset_right = 1080.0
+offset_bottom = 150.0
+theme_override_font_sizes/font_size = 64
+text = "BARBER EMPIRE"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 200.0
+offset_top = 155.0
+offset_right = 1080.0
+offset_bottom = 190.0
+theme_override_font_sizes/font_size = 20
+text = "Cut hair. Build an empire."
+horizontal_alignment = 1
+modulate = Color(0.8, 0.75, 0.5, 1)
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 490.0
+offset_top = 220.0
+offset_right = 790.0
+offset_bottom = 560.0
+theme_override_constants/separation = 12
+
+[node name="BtnStart" type="Button" parent="VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 52)
+theme_override_font_sizes/font_size = 22
+text = "NEW GAME"
+pivot_offset = Vector2(150, 26)
+
+[node name="BtnContinue" type="Button" parent="VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 52)
+theme_override_font_sizes/font_size = 22
+text = "CONTINUE"
+pivot_offset = Vector2(150, 26)
+
+[node name="BtnSettings" type="Button" parent="VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 52)
+theme_override_font_sizes/font_size = 20
+text = "SETTINGS"
+pivot_offset = Vector2(150, 26)
+
+[node name="BtnCredits" type="Button" parent="VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 52)
+theme_override_font_sizes/font_size = 20
+text = "CREDITS"
+pivot_offset = Vector2(150, 26)
+
+[node name="BtnExit" type="Button" parent="VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(300, 52)
+theme_override_font_sizes/font_size = 20
+text = "EXIT"
+pivot_offset = Vector2(150, 26)
+
+[node name="SettingsPanel" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 820.0
+offset_top = 200.0
+offset_right = 1160.0
+offset_bottom = 450.0
+visible = false
+
+[node name="SettingsTitle" type="Label" parent="SettingsPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 330.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 22
+text = "Settings"
+
+[node name="VolumeLabel" type="Label" parent="SettingsPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 200.0
+offset_bottom = 90.0
+text = "Master Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="SettingsPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 95.0
+offset_right = 320.0
+offset_bottom = 120.0
+value = 80.0
+
+[node name="FullscreenCheck" type="CheckButton" parent="SettingsPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 135.0
+offset_right = 330.0
+offset_bottom = 165.0
+text = "Fullscreen"
+
+[node name="CreditsPanel" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 120.0
+offset_top = 200.0
+offset_right = 480.0
+offset_bottom = 500.0
+visible = false
+
+[node name="CreditsText" type="Label" parent="CreditsPanel"]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 350.0
+offset_bottom = 280.0
+text = "BARBER EMPIRE
+A pixel-art tycoon game.
+
+Made with Godot 4.
+
+Design: You
+Code: You
+Art: Placeholder (for now)
+
+Thanks for playing!"
+
+[node name="VersionLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 690.0
+offset_right = 200.0
+offset_bottom = 715.0
+theme_override_font_sizes/font_size = 13
+text = "v1.0"
+modulate = Color(0.6, 0.6, 0.6, 1)

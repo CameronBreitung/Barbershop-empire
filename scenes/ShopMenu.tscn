@@ -1,0 +1,124 @@
+[gd_scene load_steps=2 format=3 uid="uid://shop_menu_001"]
+
+[ext_resource type="Script" path="res://scripts/ShopMenu.gd" id="1_shop"]
+
+[node name="ShopMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_shop")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.06, 0.09, 0.07, 1)
+
+[node name="Header" type="PanelContainer" parent="."]
+layout_mode = 1
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 1280.0
+offset_bottom = 60.0
+
+[node name="HBox" type="HBoxContainer" parent="Header"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(240, 0)
+theme_override_font_sizes/font_size = 26
+text = "  BUY A SHOP"
+
+[node name="MoneyLabel" type="Label" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(240, 0)
+theme_override_font_sizes/font_size = 20
+text = "Cash: $0.00"
+
+[node name="RepLabel" type="Label" parent="Header/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 18
+text = "Rep: 0"
+horizontal_alignment = 2
+
+[node name="BackBtn" type="Button" parent="Header/HBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(110, 0)
+theme_override_font_sizes/font_size = 18
+text = "← BACK"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 68.0
+offset_right = 720.0
+offset_bottom = 700.0
+
+[node name="ShopList" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="InfoPanel" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 740.0
+offset_top = 68.0
+offset_right = 1260.0
+offset_bottom = 560.0
+visible = false
+
+[node name="VBox" type="VBoxContainer" parent="InfoPanel"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 500.0
+offset_bottom = 480.0
+theme_override_constants/separation = 14
+
+[node name="NameLabel" type="Label" parent="InfoPanel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Shop Name"
+
+[node name="DescLabel" type="Label" parent="InfoPanel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Description"
+autowrap_mode = 3
+modulate = Color(0.8, 0.8, 0.8, 1)
+
+[node name="IncomeLabel" type="Label" parent="InfoPanel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Income: $0/sec"
+modulate = Color(0.5, 1.0, 0.5, 1)
+
+[node name="ReqLabel" type="Label" parent="InfoPanel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Requires: $0  |  Rep 0"
+modulate = Color(1.0, 0.8, 0.4, 1)
+
+[node name="BuyBtn" type="Button" parent="InfoPanel/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 52)
+theme_override_font_sizes/font_size = 20
+text = "BUY"
+
+[node name="StatusLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 740.0
+offset_top = 575.0
+offset_right = 1260.0
+offset_bottom = 620.0
+theme_override_font_sizes/font_size = 18
+text = ""
+horizontal_alignment = 1
+visible = false
+modulate = Color(0.4, 1.0, 0.5, 1)
