@@ -3,9 +3,9 @@
 ## Buying all five triggers the final tower scene.
 extends Control
 
-@onready var money_label:   Label         = $Header/MoneyLabel
-@onready var rep_label:     Label         = $Header/RepLabel
-@onready var back_btn:      Button        = $Header/BackBtn
+@onready var money_label:   Label         = $Header/HBox/MoneyLabel
+@onready var rep_label:     Label         = $Header/HBox/RepLabel
+@onready var back_btn:      Button        = $Header/HBox/BackBtn
 @onready var chain_list:    VBoxContainer = $ScrollContainer/ChainList
 @onready var info_panel:    Panel         = $InfoPanel
 @onready var info_name:     Label         = $InfoPanel/VBox/NameLabel
@@ -13,7 +13,7 @@ extends Control
 @onready var info_stats:    Label         = $InfoPanel/VBox/StatsLabel
 @onready var buy_btn:       Button        = $InfoPanel/VBox/BuyBtn
 @onready var status_label:  Label         = $StatusLabel
-@onready var empire_bar:    ProgressBar   = $Header/EmpireBar
+@onready var empire_bar:    ProgressBar   = $Header/HBox/EmpireBar
 
 const HOME_SHOP_SCENE   := "res://scenes/HomeShop.tscn"
 const FINAL_SCENE       := "res://scenes/FinalTowerScene.tscn"

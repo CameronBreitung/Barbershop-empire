@@ -4,24 +4,24 @@
 extends Control
 
 # ── Node refs ────────────────────────────────────────────────────────────────
-@onready var money_label:      Label      = $HUD/MoneyLabel
-@onready var rep_label:        Label      = $HUD/RepLabel
-@onready var income_label:     Label      = $HUD/IncomeLabel
+@onready var money_label:      Label      = $HUD/HBoxContainer/MoneyLabel
+@onready var rep_label:        Label      = $HUD/HBoxContainer/RepLabel
+@onready var income_label:     Label      = $HUD/HBoxContainer/IncomeLabel
 @onready var dialogue_label:   Label      = $DialogueLabel
 @onready var customer_rect:    ColorRect  = $CustomerArea/CustomerHead
-@onready var score_bar:        ProgressBar = $HUD/ScoreBar
-@onready var patience_bar:     ProgressBar = $HUD/PatienceBar
+@onready var score_bar:        ProgressBar = $ScoreBar
+@onready var patience_bar:     ProgressBar = $PatienceBar
 @onready var result_panel:     Panel      = $ResultPanel
 @onready var result_label:     Label      = $ResultPanel/ResultLabel
 @onready var review_label:     Label      = $ResultPanel/ReviewLabel
 @onready var stars_label:      Label      = $ResultPanel/StarsLabel
 @onready var next_customer_btn: Button    = $ResultPanel/NextBtn
-@onready var btn_upgrade:      Button     = $HUD/BtnUpgrade
-@onready var btn_staff:        Button     = $HUD/BtnStaff
-@onready var btn_shop:         Button     = $HUD/BtnShop
-@onready var btn_empire:       Button     = $HUD/BtnEmpire
-@onready var btn_save:         Button     = $HUD/BtnSave
-@onready var btn_menu:         Button     = $HUD/BtnMenu
+@onready var btn_upgrade:      Button     = $HUD/HBoxContainer/BtnUpgrade
+@onready var btn_staff:        Button     = $HUD/HBoxContainer/BtnStaff
+@onready var btn_shop:         Button     = $HUD/HBoxContainer/BtnShop
+@onready var btn_empire:       Button     = $HUD/HBoxContainer/BtnEmpire
+@onready var btn_save:         Button     = $HUD/HBoxContainer/BtnSave
+@onready var btn_menu:         Button     = $HUD/HBoxContainer/BtnMenu
 @onready var clip_zone:        Control    = $CustomerArea/ClipZone
 @onready var progress_fill:    ColorRect  = $CustomerArea/ClipZone/Fill
 @onready var notification_label: Label   = $NotificationLabel

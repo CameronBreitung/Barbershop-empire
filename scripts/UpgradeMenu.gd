@@ -3,8 +3,8 @@
 ## Each row displays current level, next cost, and a Buy button.
 extends Control
 
-@onready var money_label:   Label  = $Header/MoneyLabel
-@onready var back_btn:      Button = $Header/BackBtn
+@onready var money_label:   Label  = $Header/HBox/MoneyLabel
+@onready var back_btn:      Button = $Header/HBox/BackBtn
 @onready var rows: Dictionary = {}   # populated in _ready
 
 const UPGRADE_KEYS := ["clipper_level", "speed_level", "accuracy_level", "patience_level"]

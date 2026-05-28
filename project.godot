@@ -13,7 +13,7 @@ config_version=5
 config/name="Barber Empire"
 config/description="A pixel-art barbershop tycoon game. Cut hair, earn money, build a nationwide empire."
 run/main_scene="res://scenes/StartScreen.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]

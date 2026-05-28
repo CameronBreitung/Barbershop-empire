@@ -3,11 +3,11 @@
 ## Unlocks national expansion button when criteria are met.
 extends Control
 
-@onready var money_label:   Label  = $Header/MoneyLabel
-@onready var rep_label:     Label  = $Header/RepLabel
-@onready var income_label:  Label  = $Header/IncomeLabel
-@onready var back_btn:      Button = $Header/BackBtn
-@onready var national_btn:  Button = $Header/NationalBtn
+@onready var money_label:   Label  = $Header/HBox/MoneyLabel
+@onready var rep_label:     Label  = $Header/HBox/RepLabel
+@onready var income_label:  Label  = $Header/HBox/IncomeLabel
+@onready var back_btn:      Button = $Header/HBox/BackBtn
+@onready var national_btn:  Button = $Header/HBox/NationalBtn
 @onready var map_container: Control = $MapContainer
 @onready var stats_panel:   Panel  = $StatsPanel
 @onready var stats_text:    Label  = $StatsPanel/StatsText

@@ -2,9 +2,9 @@
 ## Displays local shops available to buy and already-owned shops.
 extends Control
 
-@onready var money_label:   Label         = $Header/MoneyLabel
-@onready var rep_label:     Label         = $Header/RepLabel
-@onready var back_btn:      Button        = $Header/BackBtn
+@onready var money_label:   Label         = $Header/HBox/MoneyLabel
+@onready var rep_label:     Label         = $Header/HBox/RepLabel
+@onready var back_btn:      Button        = $Header/HBox/BackBtn
 @onready var shop_list:     VBoxContainer = $ScrollContainer/ShopList
 @onready var info_panel:    Panel         = $InfoPanel
 @onready var info_name:     Label         = $InfoPanel/VBox/NameLabel

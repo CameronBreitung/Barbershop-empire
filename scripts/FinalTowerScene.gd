@@ -3,12 +3,12 @@
 ## can return to the main menu or keep playing.
 extends Control
 
-@onready var title_label:   Label  = $CenterContainer/VBox/TitleLabel
-@onready var stats_label:   Label  = $CenterContainer/VBox/StatsLabel
-@onready var quote_label:   Label  = $CenterContainer/VBox/QuoteLabel
-@onready var credits_label: Label  = $CenterContainer/VBox/CreditsLabel
-@onready var menu_btn:      Button = $CenterContainer/VBox/MenuBtn
-@onready var keep_btn:      Button = $CenterContainer/VBox/KeepPlayingBtn
+@onready var title_label:   Label         = $CenterContainer/VBox/TitleLabel
+@onready var stats_label:   Label         = $CenterContainer/VBox/StatsLabel
+@onready var quote_label:   Label         = $CenterContainer/VBox/QuoteLabel
+@onready var credits_label: RichTextLabel = $CenterContainer/VBox/CreditsLabel
+@onready var menu_btn:      Button        = $CenterContainer/VBox/HBox/MenuBtn
+@onready var keep_btn:      Button        = $CenterContainer/VBox/HBox/KeepPlayingBtn
 @onready var bg_rect:       ColorRect = $Background
 @onready var city_rect:     ColorRect = $CityRect
 @onready var desk_rect:     ColorRect = $DeskRect

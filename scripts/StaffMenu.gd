@@ -2,9 +2,9 @@
 ## Browse randomly generated barber candidates, hire them, and assign them to shops.
 extends Control
 
-@onready var money_label:   Label       = $Header/MoneyLabel
-@onready var back_btn:      Button      = $Header/BackBtn
-@onready var refresh_btn:   Button      = $Header/RefreshBtn
+@onready var money_label:   Label       = $Header/HBox/MoneyLabel
+@onready var back_btn:      Button      = $Header/HBox/BackBtn
+@onready var refresh_btn:   Button      = $Header/HBox/RefreshBtn
 @onready var candidates_list: VBoxContainer = $Split/Left/ScrollContainer/CandidateList
 @onready var hired_list:    VBoxContainer   = $Split/Right/ScrollContainer/HiredList
 @onready var chatter_label: Label           = $ChatterLabel
